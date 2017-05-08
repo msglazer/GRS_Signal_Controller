@@ -30,7 +30,6 @@ LIBS:contrib
 LIBS:valves
 LIBS:switches
 LIBS:relays
-LIBS:Global_Parts
 LIBS:Signal_Controller-cache
 EELAYER 25 0
 EELAYER END
@@ -77,7 +76,7 @@ F 1 "USB_OTG" H 850 3350 50  0000 L CNN
 F 2 "Connectors:USB_Micro-B" H 1200 2950 50  0001 C CNN
 F 3 "" H 1200 2950 50  0001 C CNN
 	1    1050 3000
-	1    0    0    -1  
+	0    -1   1    0   
 $EndComp
 $Comp
 L GND #PWR1
@@ -350,9 +349,9 @@ Text HLabel 4150 3750 0    60   Input ~ 0
 D-
 Text HLabel 1450 3000 2    60   Input ~ 0
 D+
-Text HLabel 1450 3100 2    60   Input ~ 0
+Text HLabel 1450 2900 2    60   Input ~ 0
 D-
-NoConn ~ 1350 3200
+NoConn ~ 1350 3100
 $Comp
 L R R1
 U 1 1 58F6EE92
@@ -799,25 +798,25 @@ F 3 "" H 8200 5550 50  0001 C CNN
 	1    8200 5550
 	0    -1   -1   0   
 $EndComp
-Text HLabel 7550 4450 2    60   Input ~ 0
-GPIO_1
-Text HLabel 7550 4650 2    60   Input ~ 0
-GPIO_2
+Text HLabel 7550 4250 2    60   Input ~ 0
+RXI
+Text HLabel 7550 4350 2    60   Input ~ 0
+TXO
 Text HLabel 7550 4750 2    60   Input ~ 0
-GPIO_3
+GPIO_1
 Text HLabel 7550 3250 2    60   Input ~ 0
-GPIO_4
+GPIO_2
 Text HLabel 7550 4050 2    60   Input ~ 0
 BUTTON_1
 Text HLabel 7550 3350 2    60   Input ~ 0
-GPIO_5
+GPIO_3
 Text HLabel 7550 3450 2    60   Input ~ 0
-GPIO_6
+GPIO_4
 Text HLabel 7550 4150 2    60   Input ~ 0
 BUTTON_2
-Text HLabel 7550 4250 2    60   Input ~ 0
+Text HLabel 7550 4450 2    60   Input ~ 0
 BUTTON_3
-Text HLabel 7550 4350 2    60   Input ~ 0
+Text HLabel 7550 4650 2    60   Input ~ 0
 BUTTON_4
 $Comp
 L SW_Push SW2
@@ -1027,17 +1026,17 @@ F 3 "" H 5650 6750 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text HLabel 5950 6450 2    60   Input ~ 0
-GPIO_1
+RXI
 Text HLabel 5950 6550 2    60   Input ~ 0
-GPIO_2
+TXO
 Text HLabel 5950 6650 2    60   Input ~ 0
-GPIO_3
+GPIO_1
 Text HLabel 5950 6750 2    60   Input ~ 0
-GPIO_4
+GPIO_2
 Text HLabel 5950 6850 2    60   Input ~ 0
-GPIO_5
+GPIO_3
 Text HLabel 5950 6950 2    60   Input ~ 0
-GPIO_6
+GPIO_4
 $Comp
 L GND #PWR20
 U 1 1 58FA74E4
@@ -1075,10 +1074,6 @@ Wire Wire Line
 Connection ~ 4600 5650
 Wire Wire Line
 	950  3400 950  3550
-Wire Wire Line
-	950  3450 1050 3450
-Wire Wire Line
-	1050 3450 1050 3400
 Connection ~ 950  3450
 Wire Wire Line
 	4300 1200 4300 1050
@@ -1170,7 +1165,7 @@ Wire Wire Line
 Wire Wire Line
 	1450 3000 1350 3000
 Wire Wire Line
-	1350 3100 1450 3100
+	1350 2900 1450 2900
 Wire Wire Line
 	1950 3550 1950 3650
 Wire Wire Line
@@ -1366,9 +1361,9 @@ Wire Wire Line
 Wire Wire Line
 	7150 4750 7550 4750
 Wire Wire Line
-	7550 4650 7150 4650
+	7550 4350 7150 4350
 Wire Wire Line
-	7150 4450 7550 4450
+	7150 4250 7550 4250
 Wire Wire Line
 	7550 3350 7150 3350
 Wire Wire Line
@@ -1378,9 +1373,9 @@ Wire Wire Line
 Wire Wire Line
 	7150 4150 7550 4150
 Wire Wire Line
-	7550 4250 7150 4250
+	7550 4450 7150 4450
 Wire Wire Line
-	7150 4350 7550 4350
+	7150 4650 7550 4650
 Wire Wire Line
 	1150 6850 1250 6850
 Wire Wire Line
@@ -1507,4 +1502,10 @@ Wire Wire Line
 Wire Wire Line
 	1550 1550 1350 1550
 Connection ~ 1350 1550
+Wire Wire Line
+	950  3450 1400 3450
+Wire Wire Line
+	1400 3450 1400 3200
+Wire Wire Line
+	1400 3200 1350 3200
 $EndSCHEMATC
