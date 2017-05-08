@@ -28,7 +28,6 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:Global_Parts
 LIBS:Relay_Expansion_Board-cache
 EELAYER 25 0
 EELAYER END
@@ -119,7 +118,7 @@ F 1 "CONN_01X05" V 4600 2850 50  0000 C CNN
 F 2 "Pin_Headers:Pin_Header_Straight_1x05_Pitch2.54mm" H 4500 2850 50  0001 C CNN
 F 3 "" H 4500 2850 50  0001 C CNN
 	1    4500 2850
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L +12V #PWR04

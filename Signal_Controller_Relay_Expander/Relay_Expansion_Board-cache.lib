@@ -6,8 +6,8 @@ EESchema-LIBRARY Version 2.3
 DEF +12V #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -150 50 H I C CNN
 F1 "+12V" 0 140 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
 DRAW
 P 2 0 1 0 -30 50 0 100 N
 P 2 0 1 0 0 0 0 100 N
@@ -49,16 +49,16 @@ ENDDEF
 #
 # CONN_01X02
 #
-DEF CONN_01X02 J 0 40 Y N 1 F N
-F0 "J" 0 150 50 H V C CNN
+DEF CONN_01X02 P 0 40 Y N 1 F N
+F0 "P" 0 150 50 H V C CNN
 F1 "CONN_01X02" 100 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
 $FPLIST
- Pin_Header_Straight_1X*
- Pin_Header_Angled_1X*
- Socket_Strip_Straight_1X*
- Socket_Strip_Angled_1X*
+ Pin_Header_Straight_1X02
+ Pin_Header_Angled_1X02
+ Socket_Strip_Straight_1X02
+ Socket_Strip_Angled_1X02
 $ENDFPLIST
 DRAW
 S -50 -45 10 -55 0 1 0 N
@@ -71,16 +71,16 @@ ENDDEF
 #
 # CONN_01X05
 #
-DEF CONN_01X05 J 0 40 Y N 1 F N
-F0 "J" 0 300 50 H V C CNN
+DEF CONN_01X05 P 0 40 Y N 1 F N
+F0 "P" 0 300 50 H V C CNN
 F1 "CONN_01X05" 100 0 50 V V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
 $FPLIST
- Pin_Header_Straight_1X*
- Pin_Header_Angled_1X*
- Socket_Strip_Straight_1X*
- Socket_Strip_Angled_1X*
+ Pin_Header_Straight_1X05
+ Pin_Header_Angled_1X05
+ Socket_Strip_Straight_1X05
+ Socket_Strip_Angled_1X05
 $ENDFPLIST
 DRAW
 S -50 -195 10 -205 0 1 0 N
@@ -102,10 +102,16 @@ ENDDEF
 DEF CP1 C 0 10 N N 1 F N
 F0 "C" 25 100 50 H V L CNN
 F1 "CP1" 25 -100 50 H V L CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
 $FPLIST
- CP_*
+ SMD*_Pol
+ C_Axial*
+ C_Radial*
+ c_elec*
+ C*elec
+ TantalC*
+ CP*
 $ENDFPLIST
 DRAW
 A 0 -150 128 1287 513 0 1 20 N -80 -50 80 -50
@@ -122,10 +128,11 @@ ENDDEF
 DEF D_Schottky D 0 40 N N 1 F N
 F0 "D" 0 100 50 H V C CNN
 F1 "D_Schottky" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
 $FPLIST
- TO-???*
+ Diode_*
+ D-*
  *SingleDiode
  *_Diode_*
  *SingleDiode*
@@ -178,8 +185,8 @@ ENDDEF
 DEF GND #PWR 0 0 Y Y 1 F P
 F0 "#PWR" 0 -250 50 H I C CNN
 F1 "GND" 0 -150 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
 DRAW
 P 6 0 1 0 0 0 0 -50 50 -50 0 -100 -50 -50 0 -50 N
 X GND 1 0 0 0 D 50 50 1 1 W N
@@ -191,8 +198,8 @@ ENDDEF
 DEF LED D 0 40 Y N 1 F N
 F0 "D" 0 100 50 H V C CNN
 F1 "LED" 0 -100 50 H V C CNN
-F2 "" 0 0 50 H I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "" 0 0 50 H V C CNN
+F3 "" 0 0 50 H V C CNN
 $FPLIST
  LED*
 $ENDFPLIST
@@ -212,11 +219,11 @@ ENDDEF
 DEF R R 0 0 N Y 1 F N
 F0 "R" 80 0 50 V V C CNN
 F1 "R" 0 0 50 V V C CNN
-F2 "" -70 0 50 V I C CNN
-F3 "" 0 0 50 H I C CNN
+F2 "" -70 0 50 V V C CNN
+F3 "" 0 0 50 H V C CNN
 $FPLIST
  R_*
- R_*
+ Resistor_*
 $ENDFPLIST
 DRAW
 S -40 -100 40 100 0 1 10 N
